@@ -67,10 +67,10 @@ export const Create=()=>{
                             <input value={pack.type} onChange={gather} type="text" name="type" placeholder="Model Type" className="form-control" />
                         </div>
                         <div className="row mt-3 justify-content-around">
-                            <button className="btn btn-outline-light col-1" onClick={()=>onAdd}>
+                            <button className="btn btn-outline-light col-1" onClick={onAdd}>
                                 <i class="bi bi-send-plus-fill"></i>
                             </button>
-                            <button className="btn btn-outline-dark col-1" onClick={()=>onCancel}>
+                            <button className="btn btn-outline-dark col-1" onClick={onCancel}>
                                 <i class="bi bi-arrow-return-left"></i>
                             </button>
                         </div>
