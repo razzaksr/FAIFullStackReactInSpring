@@ -12,6 +12,7 @@ export const Menu=()=>{
                             <Nav.Link href="/#/view">Home</Nav.Link>
                             <Nav.Link href="/#/fresh">New</Nav.Link>
                             <Nav.Link href="/#/modify">Update</Nav.Link>
+                            <Nav.Link href="/#/filter">ShortList</Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
                 </Container>

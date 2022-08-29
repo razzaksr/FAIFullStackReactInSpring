@@ -6,6 +6,7 @@ import { Create } from './Create'
 import { Read } from './Read'
 import { Update } from './Update'
 import { Menu } from './Menu'
+import { Filter } from './Filter'
 
 const App=()=>{
     return(
@@ -15,6 +16,7 @@ const App=()=>{
                 <Routes>
                     <Route exact path="/view" element={<List/>} />
                     <Route exact path="/fresh" element={<Create/>} />
+                    <Route exact path="/filter" element={<Filter/>} />
                     <Route exact path="/open/:key" element={<Read/>} />
                     <Route exact path="/modify/:primary" element={<Update/>} />
                 </Routes>
