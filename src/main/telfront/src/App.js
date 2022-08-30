@@ -7,20 +7,36 @@ import { Read } from './Read'
 import { Update } from './Update'
 import { Menu } from './Menu'
 import { Filter } from './Filter'
+import { Alter } from './Alter'
+import { Remove } from './Remove'
+import { SignUp } from './SignUp'
+import { Login } from './Login'
 
 const App=()=>{
+    
     return(
         <>
-            <HashRouter>
-                <Menu/>
-                <Routes>
-                    <Route exact path="/view" element={<List/>} />
-                    <Route exact path="/fresh" element={<Create/>} />
-                    <Route exact path="/filter" element={<Filter/>} />
-                    <Route exact path="/open/:key" element={<Read/>} />
-                    <Route exact path="/modify/:primary" element={<Update/>} />
-                </Routes>
-            </HashRouter>
+            {
+                (sessionStorage.getItem('user'))?
+                <>
+                    <HashRouter>
+                        <Menu/>
+                        <Routes>
+                            <Route exact path="/view" element={<List/>} />
+                            <Route exact path="/fresh" element={<Create/>} />
+                            <Route exact path="/filter" element={<Filter/>} />
+                            <Route exact path="/remove" element={<Remove/>} />
+                            <Route exact path="/alter" element={<Alter/>} />
+                            <Route exact path="/open/:key" element={<Read/>} />
+                            <Route exact path="/modify/:primary" element={<Update/>} />
+                        </Routes>
+                    </HashRouter>
+                </>
+                :
+                <>
+                    <Login/>
+                </>
+            }
         </>
     )
 }

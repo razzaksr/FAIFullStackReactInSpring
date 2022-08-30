@@ -73,7 +73,7 @@ export const Filter=()=>{
                                     <label>Filter By Type</label>
                                     <input onChange={collect} value={short.type} type="text" name="type" placeholder="Type to filter" className="form-control" />
                                 </div>
-                                <div className="row justify-content-center">
+                                <div className="row justify-content-center mt-3">
                                     <button className="btn btn-outline-info col-1" onClick={doFilter}>
                                         <i class="bi bi-funnel-fill"></i>
                                     </button>

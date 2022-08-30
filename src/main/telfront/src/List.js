@@ -57,7 +57,7 @@ export const List=()=>{
                                                     <button className="btn btn-outline-danger" onClick={async()=>{
                                                         const tmp = await onSubmitDelete(obj.tvId)
                                                         alert(tmp.data)
-                                                        navi("/#/view")
+                                                        navi("/view")
                                                     }}>
                                                         <i class="bi bi-eraser"></i>
                                                     </button>
